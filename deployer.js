@@ -11,17 +11,17 @@ module.exports = function (args, callback) {
         log = this.log,
         uploadFileList = [];
 
-    if (!args.server || !bucket || !args.access_key_id || !args.secret_access_key) {
+    if (!args.server || !args.bucket || !args.access_key_id || !args.secret_access_key) {
         var help = [
             'You should argsure deployment settings in _config.yml first!',
             '',
             'Example:',
             '  deploy:',
             '    type: huaweicloud-obs',
-            '    server : <https://yourdomainname>',
-            '    bucket: <yourBucketName>',
-            '    access_key_id: <access key>',
-            '    secret_access_key: <secret access key>',
+            '    server : <https://yourdomainname>(e.g. https://obs.cn-north-1.myhwclouds.com)',
+            '    bucket: <your bucket name>(e.g. obs-2f97)',
+            '    access_key_id: <access key>(e.g. R7DYQD3DQRRLTDWYtE3S)',
+            '    secret_access_key: <secret access key>(e.g. TERHf0NGpDrbhsbc1h3xymB9w22wK8lLgOFkgjCB2)',
             '',
             'For more help, you can check the docs: ' + chalk.underline('http://hexo.io/docs/deployment.html') + ' and ' + chalk.underline('https://support.huaweicloud.com/bestpractice-obs/obs_05_0620.html')
         ];
@@ -37,7 +37,7 @@ module.exports = function (args, callback) {
     }); 
      
 
-    log.info('Uploading files to huaweicloud obs...');
+    console.log('Uploading files to huaweicloud obs...');
 
     // get all files sync
     traverseFiles(publicDir, function (file) {
@@ -55,9 +55,9 @@ module.exports = function (args, callback) {
                 SourceFile : item.file 
             }, (err, result) => { 
                 if(err){ 
-                    console.error('Error-->' + err); 
+                    console.error(item.file + ' --> ' + item.uploadPath + ' : Error: ' + err); 
                 }else{
-                    console.log('Status-->' + result.CommonMsg.Status); 
+                    console.log(item.file + ' --> ' + item.uploadPath + ' : Status: ' + result.CommonMsg.Status); 
                 } 
             });
      

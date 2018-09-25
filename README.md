@@ -16,10 +16,10 @@ You can configure this plugin in `_config.yml`.
 # You can use this:
 deploy:
   type: huaweicloud-obs
-  server : <https://yourdomainname>
-  bucket: <yourBucketName>
-  access_key_id: <access key>
-  secret_access_key: <secret access key>
+  server : <https://yourdomainname>(e.g. https://obs.cn-north-1.myhwclouds.com)
+  bucket: <your bucket name>(e.g. obs-2f97)
+  access_key_id: <access key>(e.g. R7DYQD3DQRRLTDWYtE3S)
+  secret_access_key: <secret access key>(e.g. TERHf0NGpDrbhsbc1h3xymB9w22wK8lLgOFkgjCB2)
 ```
 
 ## Known Issues
