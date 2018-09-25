@@ -17,11 +17,11 @@ module.exports = function (args, callback) {
             '',
             'Example:',
             '  deploy:',
-            '    type: "huaweicloud-obs',
-            '    server : "https://yourdomainname"',
-            '    bucket: "<yourBucketName>"',
-            '    access_key_id: "*** Provide your Access Key ***"', 
-            '    secret_access_key: "*** Provide your Secret Key ***"', 
+            '    type: huaweicloud-obs',
+            '    server : <https://yourdomainname>',
+            '    bucket: <yourBucketName>',
+            '    access_key_id: <access key>',
+            '    secret_access_key: <secret access key>',
             '',
             'For more help, you can check the docs: ' + chalk.underline('http://hexo.io/docs/deployment.html') + ' and ' + chalk.underline('https://support.huaweicloud.com/bestpractice-obs/obs_05_0620.html')
         ];

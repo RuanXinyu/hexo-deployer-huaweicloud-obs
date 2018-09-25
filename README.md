@@ -15,11 +15,11 @@ You can configure this plugin in `_config.yml`.
 ``` yaml
 # You can use this:
 deploy:
-  type: 'huaweicloud-obs',
-  server : 'https://yourdomainname',
-  bucket: "<yourBucketName>",
-  access_key_id: '*** Provide your Access Key ***',
-  secret_access_key: '*** Provide your Secret Key ***',
+  type: huaweicloud-obs
+  server : <https://yourdomainname>
+  bucket: <yourBucketName>
+  access_key_id: <access key>
+  secret_access_key: <secret access key>
 ```
 
 ## Known Issues
